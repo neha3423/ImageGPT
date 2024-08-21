@@ -1,0 +1,308 @@
+.main {
+	flex: 1;
+	min-height: 100vh;
+	padding-bottom: 15vh;
+	position: relative;
+}
+
+.main .nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	font-size: 22px;
+	padding: 20px;
+	color: #585858;
+}
+
+.main .nav img {
+	width: 40px;
+	border-radius: 50%;
+}
+
+.main-container {
+	max-width: 900px;
+	margin: auto;
+}
+
+.main .greet {
+	margin: 50px 0px;
+	font-size: 56px;
+	color: #c4c7c5;
+	font-weight: 500;
+	padding: 20px;
+}
+
+.main .greet span {
+	background: -webkit-linear-gradient(16deg, #4b90ff, #ff5546);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.main .cards {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+	gap: 15px;
+	padding: 20px;
+}
+
+.main .card {
+	height: 200px;
+	padding: 15px;
+	background-color: #f0f4f9;
+	border-radius: 10px;
+	position: relative;
+	cursor: pointer;
+}
+
+.main .card img {
+	width: 35px;
+	padding: 5px;
+	position: absolute;
+	background-color: white;
+	border-radius: 20px;
+	bottom: 10px;
+	right: 10px;
+}
+
+.main .card p {
+	color: #585858;
+	font-size: 17px;
+}
+
+.main .card:hover {
+	background-color: #dfe4ea;
+}
+
+.main-bottom {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	max-width: 900px;
+	padding: 0px 20px;
+	margin: auto;
+}
+
+.search-box {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 20px;
+	background-color: #f0f4f9;
+	padding: 10px 20px;
+	border-radius: 50px;
+}
+
+.search-box img {
+	width: 24px;
+	cursor: pointer;
+}
+
+.search-box input {
+	flex: 1;
+	background: transparent;
+	border: none;
+	outline: none;
+	padding: 8px;
+	font-size: 18px;
+}
+
+.search-box div {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+}
+
+.main .bottom-info {
+	font-size: 13px;
+	margin: 15px auto;
+	text-align: center;
+	font-weight: 300;
+}
+
+.result {
+	padding: 0px 5%;
+	max-height: 70vh;
+	overflow-y: scroll;
+	scrollbar-width: none;
+}
+
+.result::-webkit-scrollbar {
+	display: none;
+}
+
+.result-title {
+	margin: 10px 0px;
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
+
+
+
+.result-data {
+	display: flex;
+	align-items: start;
+	gap: 20px;
+}
+.result-data img {
+	width: 40px;
+	border-radius: 50%;
+}
+
+.loader {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.loader hr {
+	border-radius: 4px;
+	border: none;
+	background-color: #f6f7f8;
+	background: linear-gradient(to right, #9ed7ff, #ffffff, #9ed7ff);
+	background-size: 800px 50px;
+	height: 20px;
+	animation: loader 3.5s infinite linear;
+}
+
+@keyframes loader {
+	0% {
+		background-position: -800px 0px;
+	}
+	100% {
+		background-position: 800px 0px;
+	}
+}
+
+.result-data p {
+	font-size: 17px;
+	font-weight: 300;
+	line-height: 1.8;
+}
+
+@media (max-width: 600px) {
+	.main-bottom input {
+		flex: none;
+		width: 150px;
+	}
+	.main-bottom img {
+		width: 20px;
+	}
+	.search-box {
+		padding: 5px 10px;
+	}
+	.search-box div {
+		gap: 5px;
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	
+	.main .nav {
+		color: #a7a7a7;
+	}
+
+	.main .greet {
+		color: #ded8db;
+	}
+
+	.main .card {
+		background-color: #342E37;
+	}
+
+	.main .card img {
+		background-color: rgb(241, 229, 229);
+	}
+
+	.main .card p {
+		color: #a7a7a7;
+	}
+
+	.main .card:hover {
+		background-color: #201b15;
+	}
+
+	.search-box {
+		background-color: #0f0b06;
+		border: 1px solid #444444;
+	}
+
+	.search-box > input {
+		color: lightgray;
+	}
+
+	.loader hr {
+		background-color: #090808;
+		background: linear-gradient(to right, #9ed7ff, #000000, #9ed7ff);
+	}
+
+	.result p {
+		color: lightgray;
+	}
+
+	.bottom-info{
+		color: white;
+	}
+}
+  
+  .image-container {
+	display: flex;
+	flex-wrap: wrap;
+  }
+  
+  .image-container img {
+	width: 100px; /* Adjust width as needed */
+	height: 70px; /* Adjust height as needed */
+	object-fit: cover;
+	margin-right: 10px; /* Adjust margin between images */
+	margin-bottom: 10px; /* Adjust margin between lines */
+  }
+
+  .result-title {
+	display: flex;
+	align-items: flex-start; /* Align items to the start of the flex container */
+  }
+  .result-title img {
+	width: 40px;
+	border-radius: 50%;}
+  .result-title-images {
+	display: flex;
+	align-items: flex-start; /* Align items to the start of the flex container */
+	padding-top: 5px; /* Add padding to the top of the block */
+	padding-left: 60px;
+	 /* Add padding to the left of the block */
+	 /* Display items horizontally */
+  }
+  .selected-images {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap; /* Allow items to wrap to the next line */
+	gap: 10px; /* Add space of 10px between images */
+	margin-top: 10px; 
+  }
+  
+  .selected-images img {
+	object-fit: cover; /* Ensures the image covers the entire container */
+	width: min-content; /* Set the width of the image */
+	height: 100px; /* Set the height of the image */
+  }
+  
+  .selected-images, .selected-images1 {
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 10px;
+  }
+  
+  .image-wrapper {
+	margin-right: 5px;
+	margin-bottom: 5px;
+  }
+  
+  .prompt {
+	flex-grow: 1; /* Allow the prompt to grow to fill available space */
+	word-wrap: break-word; /* Wrap long words to prevent overflow */
+	max-width: 80%; /* Limit the maximum width of the prompt */
+  }
+  
+  

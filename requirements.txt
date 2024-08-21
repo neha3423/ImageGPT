@@ -1,0 +1,13 @@
+flask
+flask_cors
+opencv-python
+google-generativeai
+python-dotenv
+torch
+pillow
+transformers
+skimage
+ultralytics
+torchvision
+
+
